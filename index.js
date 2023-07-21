@@ -27,6 +27,10 @@ app.all("/app2", function(req, res) {
     apiProxy.web(req, res, {target: ServerTwo});
 });
 
+app.get('/ping', (req, res) => {
+    res.send('Hello World!')
+})
+
 // use port 3000 unless there exists a preconfigured port
 var port = process.env.PORT || 3000;
 
